@@ -11,47 +11,51 @@ module.exports = {
     index: './src/index.js',
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     filename: '[name].[hash].js',
-    // Use absolute paths for assets
-    publicPath: '/',
+    // Use absolute paths for assets, I uncomment this when building
+    // publicPath: '/A-Frame-Character-Editor/',
   },
   module: {
-      rules: [
-        {
-          test: /\.html$/,
-          use: {
-            loader: 'html-loader',
-            options: {
-              attrs: [
-                'img:src',
-                'audio:src',
-              ],
-            }
+    rules: [
+      {
+        test: /\.html$/,
+        use: {
+          loader: 'html-loader',
+          options: {
+            attrs: [
+              'img:src',
+              'audio:src',
+            ],
           }
-        },
-        {
-          test: /\.(jpe?g|png|mp3|wav)$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: '[path][name].[ext]?[hash:7]',
-                context: 'src',
-              },
+        }
+      },
+      {
+        test: /\.(jpe?g|png|mp3|wav|glb)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]?[hash:7]',
+              context: 'src',
             },
-          ],
-        },
-      ]
+          },
+        ],
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+    ]
   },
   plugins: [
-    // Clean dist/ on each build
-    new CleanWebpackPlugin(['dist']),
+    // Clean docs/ on each build
+    new CleanWebpackPlugin(['docs']),
     // Add HtmlWebpackPlugin entries to build individual HTML pages
     new HtmlWebpackPlugin({
       // Input path
       template: 'src/index.html',
-      // Output (within dist/)
+      // Output (within docs/)
       filename: 'index.html',
       // Inject compiled JS into <head> (as per A-Frame docs)
       inject: 'head',
