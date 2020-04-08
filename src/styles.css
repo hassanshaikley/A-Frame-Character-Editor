@@ -1,0 +1,36 @@
+.btn {
+    /* width: 100px; */
+    background: #222;
+    width: 220px;
+    margin: auto;
+    color: #bbb;
+    margin: 2px auto;
+    display: inline-block;
+    padding: 8px;
+
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+
+/* Disable Text Selection */
+body {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Safari */
+    -khtml-user-select: none;    /* Konqueror HTML */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none; 
+    font-family: monospace;
+}
+
+#src {
+    top: 95%;
+    position: fixed;
+    margin: auto;
+    display: block;
+    padding: 8px;
+    width: 140px;
+}

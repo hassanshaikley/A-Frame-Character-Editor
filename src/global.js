@@ -1,11 +1,5 @@
-// Mandatory A-Frame import
+/* File containing globals loaded by webpack */
 require('aframe');
 
-// Additional optional components
-require('aframe-animation-component');
-require('aframe-event-set-component');
-require('aframe-layout-component');
-require('aframe-template-component');
-
-// Custom components in components/
-// require('./components/foo');
+/* Neat orbital camera controls */
+require('aframe-orbit-controls');
