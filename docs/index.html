@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>A Frame Character Editor</title>
+  <meta name="keywords" content="A Frame,A-Frame,Character,Editor,3D,AR">
+<script type="text/javascript" src="/A-Frame-Character-Editor/global.394b410b64c6b9dcce45.js"></script><script type="text/javascript" src="/A-Frame-Character-Editor/index.394b410b64c6b9dcce45.js"></script></head>
+
+<body>
+  <a-scene id="a-scene">
+    <a-entity camera look-controls
+      orbit-controls="target: 0 1.5 0; minDistance: 2.5; maxDistance: 3.5; initialPosition: 0 1.5 3; ">
+    </a-entity>
+    <a-sky color="#74A38f"></a-sky>
+    <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+      <div class="btn" id="prev-hair">Previous Hair</div>
+      <div class="btn" id="next-hair">Next Hair</div>
+      <br />
+      <div class="btn" id="prev-skin">Previous Skin</div>
+      <div class="btn" id="next-skin">Next Skin</div>
+      <br />
+      <div class="btn" id="prev-horn">Previous Horn</div>
+      <div class="btn" id="next-horn">Next Horn</div>
+      <br />
+      <div class="btn" id="toggle-armor">Toggle Armor</div>
+      <br />
+      <a href="https://github.com/hassanshaikley/A-Frame-Character-Editor">
+        <div class="btn" id="src">Source Code</div>
+      </a>
+    </div>
+  </a-scene>
+</body>
+
+</html>

@@ -14,7 +14,7 @@ module.exports = {
     path: path.resolve(__dirname, 'docs'),
     filename: '[name].[hash].js',
     // Use absolute paths for assets, I uncomment this when building
-    // publicPath: '/A-Frame-Character-Editor/',
+    publicPath: '/A-Frame-Character-Editor/',
   },
   module: {
     rules: [
