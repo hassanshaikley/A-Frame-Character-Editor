@@ -14,5 +14,5 @@ In a nutshell this is what I did:
 - In edit mode `Vertex -> Clean Vertices` and `Mesh -> Clean up -> Clean up by distance`
 - Attach the items to the armature
 - Give them id's so that you can select them from javascript
-- Export them using the gltf/glb exporte
+- Export them using the gltf/glb exporter
 - Import them into the project and use them!
